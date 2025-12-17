@@ -1,0 +1,39 @@
+{% load static %}
+<html>
+    <head>
+        <title>This is admissions view page</title>
+        <!-- <link rel="stylesheet" href="{% static 'stylesheets/style.css'%}"/> -->
+        <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}?v={% now 'U' %}">
+    </head>
+    <body>
+        <h2>
+        <img src="{% static 'images/twg.jfif'  %}" alt=" No image found"/>
+        Telugu web Guru Learning Platform</h2>
+        <br>
+        <hr/>
+        <br>
+        <div class="module">
+            <h1>Admissions</h1><br>
+            <a href="/ad/addadmission/"><button type="button" name="button">Add admission</button></a><br><br>
+            <a href="/ad/readadmissions/"><button type="button" name="button">Admissions Report</button></a><br><br>
+        </div>
+
+        <div class="module">
+            <h1>Classes</h1><br>
+            <a href="{% url 'python_students' 'Python' %}"><button type="button" name="button">Python Programming</button></a><br><br>
+            <a href="{% url 'java_students' 'Java' %}"><button type="button" name="button">java Programming</button></a><br><br>
+            <a href="{% url 'dot-net_students' 'Dot-Net' %}"><button type="button" name="button">Dot net</button></a><br><br>
+            <a href="{% url 'C&C++_students' 'C & C++' %}"><button type="button" name="button">C & C++</button></a>
+        </div>
+
+
+        <br><br>
+        <!-- <p><a href="{% url 'logout' %}">Logout</a></p> -->
+        <!-- <a href="accounts/logout/"><button type="submit" value="logout">logout</button></a> -->
+         <form method="post" action="{% url 'userlogout' %}" style="display:inline;">
+         {% csrf_token %}
+         <button type="submit">Logout</button>
+         </form>
+        <br>
+    </body>
+</html>

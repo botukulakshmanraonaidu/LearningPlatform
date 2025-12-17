@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+.module{
+    border: 1px solid green;
+    width: 45%;
+    float: left;
+    height: 250px;
+    margin: 20px;
+    text-align: center;
+}
+
+h1{
+    color: bisque;
+    background-color: cadetblue;
+}
+
+h2{
+    text-align: center;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+}
+
+button{
+    background-color: beige;
+    color: black;
+    width: 150px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: cadetblue;
+    color: aliceblue;
+}

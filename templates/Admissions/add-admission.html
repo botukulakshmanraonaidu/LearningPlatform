@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <title>This is admissions view page</title>
+        <!-- <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}"/> -->
+    </head>
+    <body>
+        <form method="post">
+            <table>
+            {% csrf_token %}
+            {{form.as_table}}
+            </table>
+            <button type="submit" value="Add student">submit</button>
+        </form>
+
+        student_name = {{object.student_name}}<br>
+        father_name =  {{object.father_name}}<br>
+        dob =          {{object.dob}}<br>
+        course_opted = {{object.course_opted}}<br>
+        Registration_fee = {{object.Registration_fee}}<br>
+
+        <br><br>
+        
+        <a href="{% url 'homepage' %}"><button type="button" name="button">Back</button></a>
+
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>This is python tranning class</title>
+    </head>
+    <body bgcolor="orange">
+        <table border="1">
+            <tr>
+            <th>id</th>
+            <th>student_name</th>
+            <th>father_name</th>
+            <th>dob</th>
+            <th>course_opted</th>
+            <th>Registration_fee</th>
+            </tr>
+            {% for s in  student %}
+            <tr>
+            <td>{{s.id}}</td>
+            <td>{{s.student_name}}</td>
+            <td>{{s.father_name}}</td>
+            <td>{{s.dob}}</td>
+            <td>{{s.course_opted}}</td>
+            <td>{{s.Registration_fee}}</td>
+            {% endfor %}
+            </tr>
+        </table>
+        <a href="{% url 'download_python_pdf' 'Python' %}"><button type="button">download</button></a>
+    </body>
+</html>

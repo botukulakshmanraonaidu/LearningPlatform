@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delet confirm</title>
+</head>
+<body>
+    <h1>Are u sure want to delete record ?</h1>
+    <form method="post">
+        {% csrf_token %}
+    <button type="submit" value="delete record">confirm</button>
+    </form>
+   
+    <!-- <button type="submit">confirm</button> -->
+
+    <h1>please check below details you are going to delete</h1>
+        student_name = {{object.student_name}}<br>
+        father_name =  {{object.father_name}}<br>
+        dob =          {{object.dob}}<br>
+        course_opted = {{object.course_opted}}<br>
+        Registration_fee = {{object.Registration_fee}}<br><br>
+
+    <a href="/ad/readadmissions/"><button type="button" value="cancel">cancel</button></a>
+    <!-- <a href="/ad/teacherlist/"><button type="button" value="cancel">cancel</button></a> -->
+   
+
+</body>
+</html>
